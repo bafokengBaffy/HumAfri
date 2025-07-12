@@ -13,7 +13,8 @@
         content="Celebrating African Unity through fashion with cultural patterns from Africa.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://humbleafricans.com">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1520250497591-112f3d76af9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1520250497591-112f3d76af9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80">
     <meta name="twitter:card" content="summary_large_image">
 
     <title>Humble Africans - African Unity Clothing | Home</title>
@@ -27,6 +28,55 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <style>
+        @keyframes zoomPan {
+            0% {
+                transform: scale(1) translateY(0);
+            }
+
+            100% {
+                transform: scale(1.1) translateY(-20px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-outline-light:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #e67e22;
+            border-color: #e67e22;
+        }
+
+        .btn-primary:hover {
+            background-color: #d35400;
+            border-color: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-outline-light {
+            border-width: 2px;
+        }
+
+        .btn-outline-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
     <!-- Favicon -->
     <link rel="icon" href="https://img.icons8.com/color/48/000000/africa.png" type="image/x-icon">
 </head>
@@ -38,7 +88,8 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
-                        <img src="https://img.icons8.com/color/48/000000/africa.png" alt="Humble Africans Logo" class="me-2" style="height: 40px;">
+                        <img src="https://img.icons8.com/color/48/000000/africa.png" alt="Humble Africans Logo"
+                            class="me-2" style="height: 40px;">
                         Humble <span>Africans</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -73,16 +124,63 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1520250497591-112f3d76af9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-4">Celebrating African Unity Through Fashion</h1>
-            <p class="lead mb-5">Discover our collection of hoodies, t-shirts, caps and more featuring cultural patterns
-                from Africa.</p>
-            <a href="products.html" class="btn btn-primary btn-lg me-2">Shop Now</a>
-            <a href="about.html" class="btn btn-outline btn-lg">Learn More</a>
-        </div>
-    </section>
+    <section class="hero" style="
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+">
+        <!-- Animated Background -->
+        <div class="hero-bg" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://images.unsplash.com/photo-1520250497591-112f3d76af9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+        z-index: -1;
+        animation: zoomPan 30s infinite alternate ease-in-out;
+    "></div>
 
+        <div class="container" style="
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: white;
+        padding: 2rem;
+    ">
+            <h1 class="display-4 fw-bold mb-4" style="
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        ">Celebrating African Unity Through Fashion</h1>
+            <p class="lead mb-5" style="
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+            opacity: 0;
+        ">Discover our collection of hoodies, t-shirts, caps and more featuring cultural patterns from Africa.</p>
+            <div style="animation: fadeInUp 1s ease-out 0.4s forwards; opacity: 0;">
+                <a href="products.html" class="btn btn-primary btn-lg me-2" style="
+                padding: 0.75rem 2rem;
+                font-weight: 600;
+                border-radius: 50px;
+                transition: all 0.3s ease;
+            ">Shop Now</a>
+                <a href="about.html" class="btn btn-outline-light btn-lg" style="
+                padding: 0.75rem 2rem;
+                font-weight: 600;
+                border-radius: 50px;
+                transition: all 0.3s ease;
+            ">Learn More</a>
+            </div>
+        </div>
+
+
+    </section>
     <!-- Featured Products -->
     <section class="py-5">
         <div class="container">
@@ -94,7 +192,8 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="product-card h-100">
-                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Lesotho Hoodie" class="product-img w-100">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                            alt="Lesotho Hoodie" class="product-img w-100">
                         <div class="product-body">
                             <h3 class="product-title">Lesotho Hoodie</h3>
                             <p class="product-price">M800.00</p>
@@ -108,7 +207,8 @@
 
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="product-card h-100">
-                        <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Eswatini T-shirt" class="product-img w-100">
+                        <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                            alt="Eswatini T-shirt" class="product-img w-100">
                         <div class="product-body">
                             <h3 class="product-title">Eswatini T-shirt</h3>
                             <p class="product-price">M500.00</p>
@@ -122,7 +222,8 @@
 
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="product-card h-100">
-                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="South Africa Hoodie" class="product-img w-100">
+                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                            alt="South Africa Hoodie" class="product-img w-100">
                         <div class="product-body">
                             <h3 class="product-title">South Africa Hoodie</h3>
                             <p class="product-price">M800.00</p>
@@ -136,7 +237,8 @@
 
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="product-card h-100">
-                        <img src="https://ih1.redbubble.net/image.3924113595.5527/ssrco,baseball_cap,product,161D36:1628f0f39d,front,square,600x600-bg,f8f8f8.jpg" alt="Botswana Cap" class="product-img w-100">
+                        <img src="https://ih1.redbubble.net/image.3924113595.5527/ssrco,baseball_cap,product,161D36:1628f0f39d,front,square,600x600-bg,f8f8f8.jpg"
+                            alt="Botswana Cap" class="product-img w-100">
                         <div class="product-body">
                             <h3 class="product-title">Botswana Cap</h3>
                             <p class="product-price">M300.00</p>
@@ -160,8 +262,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="About Humble Africans"
-                        class="img-fluid rounded about-img shadow">
+                    <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                        alt="About Humble Africans" class="img-fluid rounded about-img shadow">
                 </div>
                 <div class="col-lg-6">
                     <h2>Our Story</h2>
@@ -187,7 +289,7 @@
                 <h2>What Our Customers Say</h2>
                 <p class="text-muted">Real feedback from people who love our products</p>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
@@ -199,11 +301,13 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p class="card-text">"The quality of the Lesotho Hoodie is amazing! The cultural patterns are beautiful and it's so comfortable to wear."</p>
+                            <p class="card-text">"The quality of the Lesotho Hoodie is amazing! The cultural patterns
+                                are beautiful and it's so comfortable to wear."</p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
                             <div class="d-flex align-items-center">
-                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer" class="rounded-circle me-3" width="50">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer"
+                                    class="rounded-circle me-3" width="50">
                                 <div>
                                     <h6 class="mb-0">Sarah K.</h6>
                                     <small class="text-muted">Maseru, Lesotho</small>
@@ -212,7 +316,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body">
@@ -223,11 +327,13 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p class="card-text">"I love how these clothes celebrate our African heritage. The Eswatini T-shirt is my favorite!"</p>
+                            <p class="card-text">"I love how these clothes celebrate our African heritage. The Eswatini
+                                T-shirt is my favorite!"</p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
                             <div class="d-flex align-items-center">
-                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer" class="rounded-circle me-3" width="50">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer"
+                                    class="rounded-circle me-3" width="50">
                                 <div>
                                     <h6 class="mb-0">David M.</h6>
                                     <small class="text-muted">Johannesburg, South Africa</small>
@@ -236,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body">
@@ -247,11 +353,13 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <p class="card-text">"Great customer service and fast delivery. The Botswana Cap is well-made and gets compliments everywhere I go."</p>
+                            <p class="card-text">"Great customer service and fast delivery. The Botswana Cap is
+                                well-made and gets compliments everywhere I go."</p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
                             <div class="d-flex align-items-center">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer" class="rounded-circle me-3" width="50">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer"
+                                    class="rounded-circle me-3" width="50">
                                 <div>
                                     <h6 class="mb-0">Amanda T.</h6>
                                     <small class="text-muted">Gaborone, Botswana</small>
@@ -358,23 +466,23 @@
     <!-- Custom JS -->
     <script>
         // Simple cart count update for demo purposes
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const addToCartButtons = document.querySelectorAll('.btn-primary');
             const cartCount = document.querySelector('.cart-count');
-            
+
             addToCartButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
+                button.addEventListener('click', function (e) {
                     if (e.target.textContent.includes('Add to Cart')) {
                         e.preventDefault();
                         const currentCount = parseInt(cartCount.textContent);
                         cartCount.textContent = currentCount + 1;
-                        
+
                         // Add animation
                         cartCount.classList.add('animate__animated', 'animate__bounceIn');
                         setTimeout(() => {
                             cartCount.classList.remove('animate__bounceIn');
                         }, 1000);
-                        
+
                         // Show alert
                         alert('Item added to cart!');
                     }
