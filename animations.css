@@ -1,0 +1,177 @@
+/* animations.css - Animation styles for Humble Africans */
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Toast Notifications */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-success {
+    background-color: #28a745;
+}
+
+.toast-error {
+    background-color: #dc3545;
+}
+
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Header scroll effects */
+.header.scrolled {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled-down {
+    transform: translateY(-100%);
+}
+
+.header.scrolled-up {
+    transform: translateY(0);
+}
+
+/* Product card hover effects */
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.product-card-hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    transition: transform 0.3s ease;
+}
+
+.product-image-zoom {
+    transform: scale(1.05);
+}
+
+/* Image transitions */
+.image-fade-out {
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.image-fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Product detail zoom */
+.product-detail-zoom {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}
+
+/* Accordion transitions */
+.accordion-collapse {
+    overflow: hidden;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Item removal animation */
+.fade-out-left {
+    animation: fadeOutLeft 0.3s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .toast-notification {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+    }
+
+    .product-detail-zoom {
+        transform: scale(1.1);
+    }
+}

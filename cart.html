@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Your shopping cart at Humble Africans. Review your selected items before checkout.">
+    <meta name="keywords" content="Humble Africans cart, African clothing cart, checkout, Lesotho fashion">
+    <meta name="author" content="Humble Africans">
+    <meta property="og:title" content="Shopping Cart | Humble Africans">
+    <meta property="og:description" content="Review your selected African unity clothing items before checkout.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://humbleafricans.com/cart.html">
+    <meta property="og:image" content="https://humbleafricans.com/images/placeholder-product.jpg">
+
+    <title>Shopping Cart | Humble Africans</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+     <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://img.icons8.com/color/48/000000/africa.png" alt="Humble Africans Logo" class="me-2" style="height: 40px;">
+                        Humble <span>Africans</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="products.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link position-relative" href="cart.html">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-6">Shopping Cart</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="table-responsive">
+                        <table class="table cart-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 120px;">Product</th>
+                                    <th scope="col">Details</th>
+                                    <th scope="col" style="width: 100px;">Price</th>
+                                    <th scope="col" style="width: 150px;">Quantity</th>
+                                    <th scope="col" style="width: 100px;">Total</th>
+                                    <th scope="col" style="width: 50px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="images/placeholder-product.jpg" alt="Lesotho Hoodie"
+                                            class="cart-product-img">
+                                    </td>
+                                    <td>
+                                        <h5 class="mb-1">Lesotho Hoodie</h5>
+                                        <p class="mb-1 text-muted">Size: Medium</p>
+                                        <p class="mb-0 text-muted">Color: Black</p>
+                                    </td>
+                                    <td>M800.00</td>
+                                    <td>
+                                        <div class="input-group">
+                                            <button class="btn btn-outline-secondary" type="button">-</button>
+                                            <input type="text" class="form-control text-center quantity-input"
+                                                value="1">
+                                            <button class="btn btn-outline-secondary" type="button">+</button>
+                                        </div>
+                                    </td>
+                                    <td>M800.00</td>
+                                    <td>
+                                        <button class="btn btn-link text-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/placeholder-product.jpg" alt="Eswatini T-shirt"
+                                            class="cart-product-img">
+                                    </td>
+                                    <td>
+                                        <h5 class="mb-1">Eswatini T-shirt</h5>
+                                        <p class="mb-1 text-muted">Size: Large</p>
+                                        <p class="mb-0 text-muted">Color: Blue</p>
+                                    </td>
+                                    <td>M500.00</td>
+                                    <td>
+                                        <div class="input-group">
+                                            <button class="btn btn-outline-secondary" type="button">-</button>
+                                            <input type="text" class="form-control text-center quantity-input"
+                                                value="2">
+                                            <button class="btn btn-outline-secondary" type="button">+</button>
+                                        </div>
+                                    </td>
+                                    <td>M1000.00</td>
+                                    <td>
+                                        <button class="btn btn-link text-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="products.html" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-left me-2"></i> Continue Shopping
+                        </a>
+                        <button class="btn btn-outline-danger">
+                            <i class="fas fa-trash me-2"></i> Clear Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h4 class="mb-4">Order Summary</h4>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Subtotal:</span>
+                            <span>M1800.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Shipping:</span>
+                            <span>M100.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Tax:</span>
+                            <span>M0.00</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <h5>Total:</h5>
+                            <h5>M1900.00</h5>
+                        </div>
+
+                        <div class="d-grid">
+                            <a href="checkout.html" class="btn btn-primary btn-lg">
+                                Proceed to Checkout <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5 class="mb-3">Payment Methods</h5>
+                            <div class="d-flex flex-wrap">
+                                <img src="https://via.placeholder.com/50x30" alt="Visa" class="me-2 mb-2"
+                                    style="border: 1px solid #ddd; border-radius: 4px; padding: 2px;">
+                                <img src="https://via.placeholder.com/50x30" alt="Mastercard" class="me-2 mb-2"
+                                    style="border: 1px solid #ddd; border-radius: 4px; padding: 2px;">
+                                <img src="https://via.placeholder.com/50x30" alt="Mobile Money" class="me-2 mb-2"
+                                    style="border: 1px solid #ddd; border-radius: 4px; padding: 2px;">
+                                <img src="https://via.placeholder.com/50x30" alt="Bank Transfer" class="me-2 mb-2"
+                                    style="border: 1px solid #ddd; border-radius: 4px; padding: 2px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded shadow-sm mt-4">
+                        <h5 class="mb-3">Have a Coupon?</h5>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Coupon code">
+                            <button class="btn btn-primary" type="button">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Humble Africans</h5>
+                    <p>Celebrating African Unity through fashion with cultural patterns from Lesotho, South Africa,
+                        Botswana and Eswatini.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5>Products</h5>
+                    <ul>
+                        <li><a href="products.html">Hoodies</a></li>
+                        <li><a href="products.html">T-shirts</a></li>
+                        <li><a href="products.html">Caps</a></li>
+                        <li><a href="products.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Maseru, Lesotho</li>
+                        <li><i class="fas fa-envelope me-2"></i> baffkay20@gmail.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +266 63210786</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="mb-0">&copy; 2025 Humble Africans. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
